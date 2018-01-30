@@ -5,12 +5,16 @@ module.exports = (sequelize, DataTypes) => {
     places_id: DataTypes.INTEGER,
     rating: DataTypes.INTEGER,
     review: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
   });
+
+  user_places.associate = (models) => {
+    user_places.belongsTo(models.User, {
+      foreignKey: `user_id`
+    })
+    user_places.belongsTo(model.Places, {
+      foreignKey: `places_id`
+    })
+
+  }
   return user_places;
 };
