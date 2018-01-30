@@ -8,19 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      beach: {
-        type: Sequelize.STRING
-      },
-      shopping: {
-        type: Sequelize.STRING
-      },
-      sport: {
-        type: Sequelize.STRING
-      },
-      music: {
-        type: Sequelize.STRING
-      },
-      culinary: {
+      interest: {
         type: Sequelize.STRING
       },
       createdAt: {
