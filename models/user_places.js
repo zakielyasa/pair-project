@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     user_places.belongsTo(models.User, {
       foreignKey: `user_id`
     })
-    user_places.belongsTo(model.Places, {
+    user_places.belongsTo(models.Places, {
       foreignKey: `places_id`
     })
 
