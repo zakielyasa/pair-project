@@ -1,7 +1,14 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Interest = sequelize.define('Interest', {
-    interest: DataTypes.STRING
+    interest: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: { 
+          is: ["^[a-z]+$",'i'], //hanya nerima huruf
+          notEmpty: true
+       }
+    }
   });
 
   Interest.associate = (models) => {
