@@ -2,21 +2,29 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-      return queryInterface.bulkInsert('Interest', [{
-        interest: 'Shopping'
+      return queryInterface.bulkInsert('Interests', [{
+        interest: 'Shopping',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },{
-        interest: 'Sports'
+        interest: 'Sports',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },{
-        interest: 'Music'
+        interest: 'Music',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },{
-        interest: 'Culinary'
-      },
-        interest: 'Nature'
-      },
-
+        interest: 'Culinary',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },{
+        interest: 'Nature',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
 
     ], {});
-    */
   },
 
   down: (queryInterface, Sequelize) => {

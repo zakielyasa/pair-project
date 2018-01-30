@@ -3,7 +3,7 @@ const router = express.Router()
 const models = require('../models')
 
 router.get('/', (req,res) => {
-  res.send('Welcome Aboard')
+  res.send('WELCOME TO INTEREST ADVISOR')
 })
 
 router.get('/list', (req,res) =>{
