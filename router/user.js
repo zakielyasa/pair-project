@@ -49,6 +49,31 @@ router.get('/delete/:id' , (req,res) => {
   .then(data => res.redirect('/user/list'))
 })
 
+router.get('/login', (req,res) => {
+  res.render('login')
+})
+
+// router.post('/login', (req,res) => {
+//   models.User.findOne({
+//     where: {
+//       username: req.body.username
+//     }
+//   }).then(User => {
+//     if (User) {
+//       console.log(User.password);
+//       // bcrypt.compare(req.body.password, User.password)
+//       // res.render('/interest')
+//     }
+//     else {
+//       console.log('no data');
+//     }
+//   }).catch(err => {
+//     console.log(err);
+//   })
+// })
+
+
+
 
 
 
